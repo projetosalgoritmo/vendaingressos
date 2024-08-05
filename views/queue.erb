@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fila de Clientes</title>
+</head>
+<body>
+  <h1>Fila de Clientes</h1>
+  <% @events.each_with_index do |event, index| %>
+    <h2><%= event.name %> - <%= event.date %></h2>
+    <p>Fila: <%= event.queue.to_string %></p>
+    <form action="/queue" method="post">
+      <input type="hidden" name="event" value="<%= index %>">
+      <input type="submit" value="Processar Fila">
+    </form>
+  <% end %>
+  <a href="/">Voltar</a>
+</body>
+</html>
