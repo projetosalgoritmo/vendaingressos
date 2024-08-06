@@ -1,0 +1,94 @@
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    display: flex;
+    justify-content: center; 
+    min-height: 100vh;
+    margin: 0; 
+    flex-direction: column;
+}
+
+.img {
+    position: relative;
+    top: -20rem;
+    width: 6%;
+    margin-left: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.title {
+    position: relative;
+    top: -16rem;
+    font-size: 3.8rem;
+    margin-left: 3rem;
+}
+
+.capa {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.capa img {
+    position: relative;
+    top: -13rem;
+    width: 55rem;
+    border-radius: 25px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+label {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+input {
+    width: 80%;
+    font-size: 2rem;
+    height: 5rem;
+    margin-top: 2rem;
+    border: none;
+    border-bottom: 1px solid rgb(155, 155, 155);
+}
+
+input:focus {
+    border-bottom: rgb(103, 9, 217); 
+    box-shadow: 0 0 5px rgb(131, 20, 205); 
+    outline: none; 
+    font-size: 2rem;
+}
+
+.button {
+    position: relative;
+    bottom: -15rem;
+    width: 70%;
+    height: 7rem;
+    border-radius: 25px;
+    font-size: 2.5rem;
+    padding: 20px 1rem;
+    margin-top: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    left: 5rem;
+}
+
+
+

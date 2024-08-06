@@ -8,6 +8,7 @@ require_relative 'node'
 $events = []
 
 # Página inicial
+
 get '/' do
   erb :index
 end
