@@ -1,0 +1,44 @@
+
+.img {
+    margin-top: 8rem;
+    width: 6%;
+    margin-left: 3rem;
+}
+
+
+.card {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    align-items: center;
+   
+}
+
+.card-img {
+    width: 25rem;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.filtro {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 90%;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.like-img {
+    width: 9rem !important;
+    position: relative;
+    right: -10rem;
+    top: 4rem;
+}

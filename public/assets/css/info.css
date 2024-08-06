@@ -1,0 +1,33 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100; 
+    min-height: 100vh;
+    margin: 0; 
+    flex-direction: column;
+}
+
+.img {
+    position: relative;
+    top: -7rem;
+    width: 6%;
+    margin-left: 3rem;
+}
+
+.title {
+    position: relative;
+    top: -10rem;
+    margin-left: 1rem;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.card-img {
+    width: 100%;
+    margin: -2;
+}
+

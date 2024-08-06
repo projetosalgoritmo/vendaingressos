@@ -7,10 +7,20 @@ require_relative 'node'
 # Dados globais para armazenar eventos e clientes
 $events = []
 
-# Página inicial
+# Página Welcome
 
 get '/' do
+  erb :welcome
+end
+
+# Página inicial
+
+get '/home' do
   erb :index
+end
+
+get '/info' do
+  erb :info
 end
 
 # Página de cadastro de eventos
@@ -23,7 +33,7 @@ post '/event' do
   event_date = params[:date]
   $event = Event.new(event_name, event_date)
   $events << $event
-  redirect '/'
+  redirect '/home'
 end
 
 # Página de cadastro de clientes
@@ -32,6 +42,12 @@ get '/customer' do
   erb :customer
 end
 
+get '/participante' do
+  @events = $events
+  erb :participante
+end
+
+
 post '/customer' do
   customer_name = params[:name]
   customer_cpf = params[:cpf]
@@ -39,7 +55,7 @@ post '/customer' do
   priority = params[:priority] == 'on'
   customer = Customer.new(customer_name, customer_cpf)
   $events[event_index].add_to_queue(customer, priority)
-  redirect '/'
+  redirect '/home'
 end
 
 # Página para visualizar a fila

@@ -1,19 +1,12 @@
-class Node
-  attr_accessor :data, :next_node
-
-  def initialize(data)
-    @data = data
-    @next_node = nil
-  end
-end
-
 class LinkedList
   attr_accessor :head
   
+  # Construtor inicializando head como null
   def initialize
     @head = nil
   end
 
+  # Adiciona um novo nó ao final da lista.
   def append(data)
     new_node = Node.new(data)
     if @head.nil?
@@ -27,13 +20,15 @@ class LinkedList
     end
   end
 
+  # Adiciona um novo nó ao inicio da fila
   def prepend(data)
     new_node = Node.new(data)
     new_node.next_node = @head
     @head = new_node
   end
 
-  def insert(index, data)
+  # Insere um novo nó em uma posição específica.
+  def insert(index,data)
     linked_list_length = 0
     length_check_start_node = @head
     while length_check_start_node != nil
@@ -53,7 +48,8 @@ class LinkedList
     end
   end
 
-  def find(start_position, elements_to_return)
+  # Retorna uma lista de elementos a partir de uma posição inicial.
+  def find (start_position,elements_to_return)
     linked_list_length = 0
     length_check_start_node = @head
     while length_check_start_node != nil
@@ -65,7 +61,7 @@ class LinkedList
       return "The list is only #{linked_list_length} nodes long."
     else
       elements = []
-      current_node = @head
+      current_node=@head
       (start_position).times do
         current_node = current_node.next_node
       end
@@ -74,9 +70,11 @@ class LinkedList
         current_node = current_node.next_node
       end
       elements
+
     end
   end
 
+  # Verifica se um dado está presente na lista.
   def includes?(data)
     current_node = @head
     while current_node
@@ -88,6 +86,7 @@ class LinkedList
     false
   end
 
+  # Remove o último nó da lista e retorna seu valor.
   def pop
     return nil if @head.nil?
     
@@ -106,25 +105,29 @@ class LinkedList
     data
   end
 
-  def to_array
-    return [] if @head.nil?
+  # Retorna uma representação de string de todos os elementos da lista.
+  def to_string
+    return "Fila vazia" if @head.nil?
 
-    elements = []
     current_node = @head
+    result = ""
+
     while current_node
-      elements << current_node.data
+      result += current_node.data.to_s + " -> "
       current_node = current_node.next_node
     end
-    elements
+
+    result.chomp(" -> ")
   end
 
   def count
     count = 0
     current_node = @head
     while current_node
-      count += 1
+      count +=1
       current_node = current_node.next_node
     end
     count
   end
+
 end

@@ -1,0 +1,100 @@
+.img {
+    margin-top: 8rem;
+    width: 6%;
+    margin-left: 3rem;
+}
+
+.title {
+    margin-top: 5rem;
+    font-size: 3.8rem;
+    margin-left: 3rem;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #777;
+    margin: 8px 0 16px;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+.button {
+    margin-left: 6rem;
+    width: 70%;
+    height: 7rem;
+    border-radius: 25px;
+    font-size: 2.5rem;
+    padding: 20px 1rem;
+    margin-top: 5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    left: 5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    font-size: 1.6rem;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #000;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.part {
+    width: 50% !important;
+}
+
+.event {
+    width: 30% !important;
+}
+
+.data {
+    width: 20% !important;
+}

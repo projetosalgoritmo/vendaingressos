@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Cadastro de Clientes</title>
+  <link rel="stylesheet" type="text/css" href="/assets/css/customer.css">
 </head>
 <body>
-  <h1>Cadastro de Clientes</h1>
+  <a href="/home">
+    <img class="img" src="/assets/images/volta.png" alt="Logo">
+  </a>
+  <h1 class="title">Inscrição em Evento</h1>
   <form action="/customer" method="post">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name" required><br>
@@ -14,13 +18,12 @@
     <label for="event">Evento:</label>
     <select id="event" name="event">
       <% @events.each_with_index do |event, index| %>
-        <option value="<%= index %>"><%= event.name %> - <%= event.date %></option>
+        <option class="options" value="<%= index %>"><%= event.name %> - <%= event.date %></option>
       <% end %>
     </select><br>
-    <label for="priority">Prioridade:</label>
-    <input type="checkbox" id="priority" name="priority"><br>
-    <input type="submit" value="Adicionar Cliente à Fila">
+    <label for="priority">Tem convênio:</label>
+    <input class="priority" type="checkbox" id="priority" name="priority"><br>
+    <input class="button" type="submit" value="Inscrever-se">
   </form>
-  <a href="/">Voltar</a>
 </body>
 </html>
