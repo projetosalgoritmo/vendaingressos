@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Cadastro de Eventos</title>
-  <link rel="stylesheet" type="text/css" href="/assets/css/event.css">
-</head>
-<body>
-  <a href="/home">
-    <img class="img" src="/assets/images/volta.png" alt="Logo">
-  </a>
-  <h1 class="title">Cadastro de Eventos</h1>
-  <div class="capa">
-    <img class="img" src="/assets/images/show3.jpeg" alt="Logo">
-  </div>
 
-  <div class="container">
-    <form action="/event" method="post">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required><br>
-      <label for="date">Data:</label>
-      <input type="text" id="date" name="date" required><br>
-      <input class="button" type="submit" value="Adicionar Evento">
-    </form>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Eventos</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/event.css">
+  </head>
+
+  <body>
+    <div class="main">
+
+      <a href="/home">
+        <img class="img" src="/assets/images/volta.png" alt="Logo">
+      </a>
+      <h1 class="title">Cadastro de Eventos</h1>
+      <div class="capa">
+        <img class="img" src="/assets/images/show3.jpeg" alt="Logo">
+      </div>
+
+    </div>
+
+    <div class="container">
+      <form action="/event" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="hour">Hora:</label>
+        <input type="datetime" id="hour" name="hour" required><br>
+        <label for="category">Categoria:</label>
+        <select name="category" id="category" required>
+          <option value="Musica">Música</option>
+          <option value="Peça Teatral">Peça Teatral</option>
+          <option value="Standup">Standup</option>
+        </select>
+        <input class="button" type="submit" value="Adicionar Evento">
+      </form>
+    </div>
+  </body>
+
 </html>

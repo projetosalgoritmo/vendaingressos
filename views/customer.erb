@@ -9,12 +9,16 @@
   <a href="/home">
     <img class="img" src="/assets/images/volta.png" alt="Logo">
   </a>
-  <h1 class="title">Inscrição em Evento</h1>
+  <h1 class="title">Inscrição de Cliente em Evento</h1>
   <form action="/customer" method="post">
     <label for="name">Nome:</label>
     <input type="text" id="name" name="name" required><br>
+    <label for="name">Endereço:</label>
+    <input type="text" id="address" name="address" required><br>
+    <label for="name">Data de Nascimento:</label>
+    <input type="date" id="birth_date" name="birth_date" required><br>
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" required><br>
+    <input type="number" id="cpf" name="cpf" required><br>
     <label for="event">Evento:</label>
     <select id="event" name="event">
       <% @events.each_with_index do |event, index| %>

@@ -1,9 +1,11 @@
 class Event
-  attr_accessor :name, :date, :queue
+  attr_accessor :name, :date, :hour, :category, :queue
 
-  def initialize(name, date)
+  def initialize(name, date, hour, category)
     @name = name
     @date = date
+    @hour = hour
+    @category = category
     @queue = LinkedList.new
   end
 
